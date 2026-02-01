@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/contact.css';
 
 export default function Contact() {
@@ -9,6 +10,13 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  // Initialize EmailJS (replace with your public key from emailjs.com)
+  useEffect(() => {
+    emailjs.init('3qGFQuPWJ6gGHbBuO'); // Replace with your actual public key
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,15 +24,38 @@ export default function Contact() {
       ...prev,
       [name]: value
     }));
+    setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    setTimeout(() => setSubmitted(false), 5000);
+    setLoading(true);
+    setError('');
+
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_thsxyj7', // Replace with your service ID
+        'template_edat47b', // Replace with your template ID
+        {
+          to_email: 'maraballikwt@gmail.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          reply_to: formData.email
+        }
+      );
+
+      console.log('Form submitted:', formData);
+      setSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (err) {
+      console.error('Error sending email:', err);
+      setError('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -36,26 +67,26 @@ export default function Contact() {
           <div className="contact-info">
             <div className="info-item">
               <h3>Email</h3>
-              <a href="mailto:sajid@example.com">sajid@example.com</a>
+              <a href="mailto:maraballikwt@gmail.com">maraballikwt@gmail.com</a>
             </div>
 
             <div className="info-item">
               <h3>LinkedIn</h3>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-                linkedin.com/in/yourprofile
+              <a href="https://www.linkedin.com/in/shaik-mahammad-sajid/" target="_blank" rel="noopener noreferrer">
+                https://www.linkedin.com/in/shaik-mahammad-sajid/
               </a>
             </div>
 
             <div className="info-item">
               <h3>GitHub</h3>
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                github.com/yourusername
+              <a href="https://github.com/skmsajid/" target="_blank" rel="noopener noreferrer">
+                github.com/skmsajid/
               </a>
             </div>
 
             <div className="info-item">
               <h3>Location</h3>
-              <p>Your City, Country</p>
+              <p>Badvel, Kadapa District, Andhra Pradesh, India</p>
             </div>
           </div>
 
@@ -63,6 +94,12 @@ export default function Contact() {
             {submitted && (
               <div className="success-message">
                 ✓ Thank you! Your message has been sent successfully.
+              </div>
+            )}
+
+            {error && (
+              <div className="error-message">
+                ✗ {error}
               </div>
             )}
 
@@ -76,6 +113,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Your name"
+                disabled={loading}
               />
             </div>
 
@@ -89,6 +127,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="your@email.com"
+                disabled={loading}
               />
             </div>
 
@@ -102,11 +141,12 @@ export default function Contact() {
                 required
                 placeholder="Your message..."
                 rows="6"
+                disabled={loading}
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-btn">
-              Send Message
+            <button type="submit" className="submit-btn" disabled={loading}>
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

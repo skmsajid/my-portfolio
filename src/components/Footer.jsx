@@ -9,7 +9,10 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-brand">Sajid</h3>
-            <p>Frontend Developer | React Enthusiast</p>
+            <p>DSA & Problem Solver | Software Developer</p>
+            <p>Badvel</p>
+            <p>Kadapa District</p>
+            <p>Andhra Pradesh, India</p>
           </div>
 
           <div className="footer-section">
@@ -25,13 +28,13 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Connect With Me</h4>
             <div className="social-links">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/skmsajid/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 GitHub
               </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/shaik-mahammad-sajid/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 LinkedIn
               </a>
-              <a href="mailto:sajid@example.com" aria-label="Email">
+              <a href="mailto:maraballikwt@gmail.com" aria-label="Email">
                 Email
               </a>
             </div>

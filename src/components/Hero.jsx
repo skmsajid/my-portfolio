@@ -53,6 +53,14 @@ export default function Hero() {
               >
                 Get In Touch
               </button>
+              <a
+                className="btn btn-resume"
+                href="/src/assets/Sajid_Resume.pdf"
+                download="Sajid_Resume.pdf"
+                aria-label="Download Sajid Resume"
+              >
+                Download Resume
+              </a>
             </div>
 
             <div className="hero-social">
@@ -71,7 +79,11 @@ export default function Hero() {
           <div className={`hero-avatar ${isVisible ? 'visible' : ''}`}>
             <div className="avatar-box">
               <div className="avatar-placeholder">
-                <span className="avatar-icon">👨‍💻</span>
+                <img 
+                  src="/src/assets/profile_pic.jpg" 
+                  alt="Shaik Mahammad Sajid" 
+                  className="avatar-image"
+                />
               </div>
               <div className="avatar-glow"></div>
             </div>

@@ -7,8 +7,8 @@ export default function Projects() {
       title: 'Friends Cart',
       description: 'A full-stack e-commerce application featuring product catalog, shopping cart management, coupon validation, product reviews, and ratings. Built with MERN stack with complete user authentication and database optimization.',
       tech: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML', 'CSS', 'JavaScript'],
-      liveLink: 'https://friends-cart-demo.com',
-      repoLink: 'https://github.com/skmsajid/friends-cart',
+      liveLink: 'https://friendscart.onrender.com/',
+      repoLink: 'https://github.com/skmsajid/E-commerce',
       highlights: ['Cart Management', 'Coupon System', 'User Reviews', 'Ratings']
     },
     {
@@ -16,8 +16,8 @@ export default function Projects() {
       title: 'Weather App',
       description: 'A responsive weather application that fetches real-time weather data using OpenWeatherMap API. Features city search, current weather display, forecasts, and a beautiful responsive UI design.',
       tech: ['React', 'JavaScript', 'OpenWeatherMap API', 'CSS', 'Responsive Design'],
-      liveLink: 'https://weather-app-demo.com',
-      repoLink: 'https://github.com/skmsajid/weather-app',
+      liveLink: 'https://github.com/skmsajid/Whether-App',
+      repoLink: 'https://github.com/skmsajid/Whether-App',
       highlights: ['Real-time Data', 'City Search', 'API Integration', 'Responsive']
     }
   ];
