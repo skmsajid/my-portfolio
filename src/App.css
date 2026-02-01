@@ -1,0 +1,39 @@
+/* App.css - Main Application Styles */
+
+.app {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0e27;
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+/* Remove default margins and padding */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure all sections render properly */
+section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container max-width for content sections */
+.app > section {
+  display: flex;
+  width: 100%;
+}
+
+/* Ensure smooth scrolling works */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Footer should stay at bottom */
+footer {
+  width: 100%;
+  margin-top: auto;
+}
