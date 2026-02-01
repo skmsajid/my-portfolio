@@ -55,7 +55,7 @@ export default function Hero() {
               </button>
               <a
                 className="btn btn-resume"
-                href="/src/assets/Sajid_Resume.pdf"
+                href="/Sajid_Resume.pdf"
                 download="Sajid_Resume.pdf"
                 aria-label="Download Sajid Resume"
               >
@@ -79,9 +79,9 @@ export default function Hero() {
           <div className={`hero-avatar ${isVisible ? 'visible' : ''}`}>
             <div className="avatar-box">
               <div className="avatar-placeholder">
-                <img 
-                  src="/src/assets/profile_pic.jpg" 
-                  alt="Shaik Mahammad Sajid" 
+                <img
+                  src="/profile_pic.jpg"
+                  alt="Shaik Mahammad Sajid"
                   className="avatar-image"
                 />
               </div>
