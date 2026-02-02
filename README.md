@@ -32,24 +32,24 @@ This portfolio serves as a central place for recruiters and collaborators to lea
 - **Version Control:** Git & GitHub
 
 ---
-
+                                                                                                                                                                          
 ## 📁 Project Structure
-my-portfolio/
-├── public/
-│ └── Resume.pdf
-├── src/
-│ ├── components/
-│ │ ├── Navbar.jsx
-│ │ ├── Hero.jsx
-│ │ ├── About.jsx
-│ │ ├── Skills.jsx
-│ │ ├── Projects.jsx
-│ │ ├── Contact.jsx
-│ │ └── Footer.jsx
-│ ├── styles/
-│ ├── App.jsx
-│ └── main.jsx
-└── package.json
+my-portfolio/                                                                   
+├── public/                                                                        
+│ └── Resume.pdf                                                                      
+├── src/                                                                       
+│ ├── components/                                                                   
+│ │ ├── Navbar.jsx                                                                   
+│ │ ├── Hero.jsx                                                                   
+│ │ ├── About.jsx                                                                   
+│ │ ├── Skills.                                                                   
+│ │ ├── Projects.jsx                                                                   
+│ │ ├── Contact.jsx                                                                   
+│ │ └── Footer.jsx                                                                   
+│ ├── styles/                                                                   
+│ ├── App.jsx                                                                   
+│ └── main.jsx                                                                   
+└── package.json                                                                   
 
 
 ---
