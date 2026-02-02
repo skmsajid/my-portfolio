@@ -5,8 +5,8 @@ export default function Projects() {
     {
       id: 1,
       title: 'Friends Cart',
-      description: 'A full-stack e-commerce application featuring product catalog, shopping cart management, coupon validation, product reviews, and ratings. Built with MERN stack with complete user authentication and database optimization.',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML', 'CSS', 'JavaScript'],
+      description: "A full-stack e-commerce application featuring a product catalog, shopping cart management, coupon validation, product reviews, and ratings. Includes secure user authentication and optimized database operations.",
+      tech: ['Node.js', 'Express', 'MongoDB', 'HTML', 'CSS', 'JavaScript'],
       liveLink: 'https://friendscart.onrender.com/',
       repoLink: 'https://github.com/skmsajid/E-commerce',
       highlights: ['Cart Management', 'Coupon System', 'User Reviews', 'Ratings']

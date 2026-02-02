@@ -413,6 +413,7 @@
 
 .achievements-card .card-title {
   color: var(--accent-secondary);
+  margin-bottom: var(--space-8);
 }
 
 .achievements-grid {
@@ -586,6 +587,18 @@
     margin-bottom: var(--space-4);
   }
 
+  .achievements-card .card-title {
+    margin-bottom: var(--space-10);
+  }
+
+  .strengths-card .card-title {
+    margin-bottom: var(--space-10);
+  }
+
+  .career-card .card-title {
+    margin-bottom: var(--space-10);
+  }
+
   .achievements-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-3);
@@ -680,6 +693,18 @@
   .card-title {
     font-size: 1rem;
     margin-bottom: var(--space-3);
+  }
+
+  .achievements-card .card-title {
+    margin-bottom: var(--space-8);
+  }
+
+  .strengths-card .card-title {
+    margin-bottom: var(--space-6);
+  }
+
+  .career-card .card-title {
+    margin-bottom: var(--space-8);
   }
 
   .achievements-grid {

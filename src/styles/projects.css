@@ -17,8 +17,9 @@
 }
 
 .projects .section-title {
-  font-size: var(--font-3xl);
+  font-size: clamp(3rem, 9vw, 4rem);
   background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -27,6 +28,29 @@
   position: relative;
   padding-bottom: var(--space-6);
   font-weight: 800;
+  letter-spacing: 1px;
+  animation: slideDownFade 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, titleGradient 3s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleGradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .projects .section-title::after {
@@ -39,6 +63,28 @@
   height: 4px;
   background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
   border-radius: 2px;
+  animation: expandWidth 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both, shimmerLine 2s ease-in-out 1s infinite;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes shimmerLine {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(74, 158, 255, 0.6);
+  }
 }
 
 .projects-subtitle {
@@ -49,6 +95,14 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 1.8;
+  background: linear-gradient(135deg, var(--text-secondary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .projects-grid {
@@ -242,7 +296,7 @@
   font-size: var(--font-sm);
   border: 2px solid;
   cursor: pointer;
-  white-space: nowrap;
+  white-space: normal;
   position: relative;
   overflow: hidden;
 }
@@ -379,10 +433,13 @@
 
   .project-links {
     flex-direction: column;
+    gap: var(--space-6);
   }
 
   .project-link {
     width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-sm);
   }
 
   .projects-note p {

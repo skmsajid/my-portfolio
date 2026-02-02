@@ -80,6 +80,7 @@ export default function Navbar() {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
+          <span className="sr-only">{menuOpen ? 'Close menu' : 'Open menu'}</span>
         </button>
 
         <ul id="primary-navigation" className={`nav-links ${menuOpen ? 'active' : ''}`} role="menubar">

@@ -358,7 +358,8 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .hero-content {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-8);
   }
 
@@ -405,14 +406,42 @@
   .hero {
     min-height: auto;
     padding: var(--space-12) var(--space-4);
+    margin-top: var(--nav-height, 56px);
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-8);
+  }
+
+  .hero-text {
+    text-align: center;
+    align-items: center;
+    padding-left: 0;
   }
 
   .hero-title {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-align: center;
   }
 
   .hero-subtitle {
     font-size: var(--font-lg);
+    text-align: center;
+  }
+
+  .hero-description {
+    text-align: center;
+  }
+
+  .greeting {
+    text-align: center;
+  }
+
+  .hero-contact {
+    align-items: center;
+    text-align: center;
   }
 
   .hero-buttons {

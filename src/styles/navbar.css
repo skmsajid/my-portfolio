@@ -50,26 +50,45 @@
 }
 
 .navbar-brand .brand-link {
-  color: var(--text-soft);
-  font-weight: 700;
-  font-size: 18px; /* slightly larger than nav items */
-  letter-spacing: 0.6px;
+  background: linear-gradient(135deg, #d4af37 0%, #4aa3ff 50%, #d4af37 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 1.2px;
   text-decoration: none;
   display: inline-block;
-  padding: 6px 0;
-  transition: color var(--transition-fast);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all var(--transition-base);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.navbar-brand .brand-link:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4), 0 0 10px rgba(74, 163, 255, 0.3);
+  transform: scale(1.05);
 }
 
 .navbar-brand .brand-link::after {
-  content: '';
+  content: '✨';
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-left: 10px;
-  border-radius: 2px;
-  background: var(--accent);
+  width: auto;
+  height: auto;
+  margin-left: 8px;
+  border-radius: 0;
+  background: transparent;
   vertical-align: middle;
-  opacity: 0.95;
+  opacity: 1;
+  font-size: 1.1em;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
 }
 
 .nav-links {
@@ -161,7 +180,14 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .hamburger { display: flex; }
+  :root {
+    --nav-height: 56px;
+    --gap: 18px;
+  }
+
+  .hamburger { display: flex; width: 40px; height: 36px; }
+  .hamburger { position: relative; display: flex; width: 46px; height: 40px; }
+  .hamburger span { width: 22px; height: 3px; margin: 4px 0; display: block; background: var(--text-soft); border-radius: 3px; }
 
   .nav-links {
     position: absolute;
@@ -170,28 +196,68 @@
     right: 0;
     background: var(--nav-bg-opaque);
     flex-direction: column;
-    gap: 12px;
-    padding: 18px 20px;
+    gap: 10px;
+    padding: 0 14px; /* collapsed by default so it doesn't cover content */
     transform-origin: top;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 360ms cubic-bezier(.2,.9,.2,1), padding 220ms;
-    border-top: 1px solid rgba(255,255,255,0.03);
+    transition: max-height 360ms cubic-bezier(.2,.9,.2,1), padding 220ms, border-top 220ms;
+    border-top: none;
   }
 
   .nav-links.active {
-    max-height: 420px;
-    padding-bottom: 18px;
+    max-height: 320px;
+    padding: 12px 14px; /* reveal padding only when open */
+    padding-bottom: 12px;
+    overflow-y: auto;
+    border-top: 1px solid rgba(255,255,255,0.03);
   }
 
   .nav-btn {
     width: 100%;
     text-align: left;
-    padding: 12px 8px;
-    font-size: 16px;
+    padding: 10px 8px;
+    font-size: 15px;
   }
 
-  .navbar-container { padding: 0 18px; }
+  .navbar-container { padding: 0 14px; }
+}
+
+  /* refined hamburger appearance */
+@media (max-width: 768px) {
+  .hamburger {
+    background: rgba(255,255,255,0.02);
+    border-radius: 9px;
+    padding: 8px 6px;
+    align-items: center;
+    justify-content: center;
+    transition: background 160ms ease, transform 160ms ease;
+  }
+
+  .hamburger:hover { background: rgba(255,255,255,0.04); transform: translateY(-1px); }
+
+  .hamburger span {
+    transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 200ms ease;
+    transform-origin: center;
+  }
+
+  .hamburger.active { background: rgba(74,163,255,0.08); }
+  .hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  /* accessible visually-hidden label */
+  .sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 }
 
 /* small tablet tweaks */

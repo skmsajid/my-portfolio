@@ -23,6 +23,9 @@
   text-align: center;
   position: relative;
   padding-bottom: var(--space-6);
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.08);
 }
 
 .skills .section-title::after {
@@ -77,9 +80,10 @@
 
 .skill-pill {
   display: flex;
+  flex-wrap: wrap; /* allow text to wrap instead of overflowing */
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-3);
+  gap: 8px;
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));
   border: 1px solid rgba(255,255,255,0.04);
   padding: 12px 14px;
@@ -98,6 +102,10 @@
 
 .skill-name {
   display: inline-block;
+  flex: 1 1 auto; /* let name take available space and wrap */
+  min-width: 0; /* allow shrinking inside flex */
+  white-space: normal;
+  word-break: break-word;
 }
 
 .skill-badge {
@@ -107,6 +115,8 @@
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 800;
+  flex: 0 0 auto; /* keep badge size stable */
+  margin-left: 8px;
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
@@ -126,7 +136,7 @@
   }
 
   .skills-pills {
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
     gap: var(--space-3);
   }
 
@@ -135,3 +145,14 @@
     font-size: 0.95rem;
   }
 }
+
+/* Keep two-column layout even on small screens but allow single-column only on extremely narrow devices */
+@media (max-width: 420px) {
+  .skills-pills {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .skill-pill { font-size: 1rem; }
+}
+
