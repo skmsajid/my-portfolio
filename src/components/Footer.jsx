@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-brand">Sajid</h3>
-            <p>DSA & Problem Solver | Software Developer</p>
+            <p>DSA & Problem Solver</p>
             <p>Badvel</p>
             <p>Kadapa District</p>
             <p>Andhra Pradesh, India</p>
