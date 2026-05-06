@@ -13,6 +13,28 @@ export default function Projects() {
     },
     {
       id: 2,
+      title: 'FixMyVillage',
+      description: 'A smart village issue management platform that enables villagers to report public issues such as garbage, water leakage, drainage, electricity, and road damage. The system connects villagers, workers, and administrators through a transparent complaint tracking and resolution workflow with real-time status updates and email notifications.',
+      tech: [
+        'React.js',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'Nodemailer',
+        'CSS',
+        'REST API'
+      ],
+      liveLink: 'https://fixmyvillage.onrender.com/',
+      repoLink: 'https://github.com/skmsajid/fixmyvillage',
+      highlights: [
+        'Complaint Management',
+        'Role-Based Dashboards',
+        'Issue Tracking',
+        'Email Notifications'
+      ]
+    },
+    {
+      id: 3,
       title: 'Weather App',
       description: 'A responsive weather application that fetches real-time weather data using OpenWeatherMap API. Features city search, current weather display, forecasts, and a beautiful responsive UI design.',
       tech: ['React', 'JavaScript', 'OpenWeatherMap API', 'CSS', 'Responsive Design'],
@@ -32,9 +54,9 @@ export default function Projects() {
 
         <div className="projects-grid">
           {projectsData.map((project, index) => (
-            <div key={project.id} className={`project-card ${index === 0 ? 'featured' : ''}`}>
+            <div key={project.id} className={`project-card ${index !== 2 ? 'featured' : ''}`}>
               <div className="project-header">
-                {index === 0 && <span className="featured-badge">⭐ Featured</span>}
+                {index !== 2 && <span className="featured-badge">⭐ Featured</span>}
                 <h3 className="project-title">{project.title}</h3>
               </div>
 
@@ -80,7 +102,7 @@ export default function Projects() {
 
         <div className="projects-note">
           <p>
-            Currently working on more projects. Check back soon for updates! 
+            Currently working on more projects. Check back soon for updates!
             <a href="https://github.com/skmsajid" target="_blank" rel="noopener noreferrer">View all on GitHub →</a>
           </p>
         </div>
