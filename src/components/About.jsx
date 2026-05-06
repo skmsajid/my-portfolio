@@ -45,8 +45,8 @@ export default function About() {
         {/* Intro Text */}
         <div className="about-intro-box">
           <p className="about-intro-text">
-            Motivated B.Tech CSE student with hands-on experience in full-stack web development using MERN stack. 
-            Passionate problem solver with strong DSA fundamentals and proven track record of building scalable web applications. 
+            Motivated B.Tech CSE student with hands-on experience in full-stack web development using MERN stack.
+            Passionate problem solver with strong DSA fundamentals and proven track record of building scalable web applications.
             Dedicated to continuous learning and staying current with modern web technologies.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function About() {
               <div key={index} className="timeline-item">
                 <div className="timeline-marker">
                   <div className="timeline-dot"></div>
-                  {index < education.length - 1 && <div className="timeline-line"></div>}
+                  {index <= education.length - 1 && <div className="timeline-line"></div>}
                 </div>
                 <div className="timeline-content">
                   <div className="edu-box">
@@ -98,8 +98,8 @@ export default function About() {
           <div className="detail-card career-card">
             <h3 className="card-title">🎯 Career Focus</h3>
             <p className="career-text">
-              Aspiring to become a proficient full-stack developer capable of building end-to-end solutions. 
-              Focused on mastering modern web technologies and contributing to impactful projects that solve real-world problems. 
+              Aspiring to become a proficient full-stack developer capable of building end-to-end solutions.
+              Focused on mastering modern web technologies and contributing to impactful projects that solve real-world problems.
               Committed to achieving excellence through continuous learning.
             </p>
           </div>
