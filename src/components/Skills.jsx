@@ -4,6 +4,7 @@ export default function Skills() {
   const skills = [
     'Python',
     'Data Structures & Algorithms',
+    'Object Oriented Programming (OOP) in Python'
     'HTML',
     'CSS',
     'JavaScript',
@@ -19,6 +20,7 @@ export default function Skills() {
 
   const proficiencyLevels = {
     JavaScript: 'Intermediate',
+    'Object Oriented Programming (OOP) in Python': 'Expert' 
     'Node.js': 'Intermediate',
     MongoDB: 'Intermediate',
     Python: 'Expert',
