@@ -2,37 +2,40 @@ import '../styles/projects.css';
 
 export default function Projects() {
   const projectsData = [
-    {
-      id: 1,
-      title: 'Friends Cart',
-      description: "A full-stack e-commerce application featuring a product catalog, shopping cart management, coupon validation, product reviews, and ratings. Includes secure user authentication and optimized database operations.",
-      tech: ['Node.js', 'Express', 'MongoDB', 'EJS', 'HTML', 'CSS', 'JavaScript'],
-      liveLink: 'https://friendscart.onrender.com/',
-      repoLink: 'https://github.com/skmsajid/E-commerce',
-      highlights: ['Cart Management', 'Coupon System', 'User Reviews', 'Ratings']
-    },
-    {
-      id: 2,
-      title: 'FixMyVillage',
-      description: 'A smart village issue management platform that enables villagers to report public issues such as garbage, water leakage, drainage, electricity, and road damage. The system connects villagers, workers, and administrators through a transparent complaint tracking and resolution workflow with real-time status updates and email notifications.',
-      tech: [
-        'React.js',
-        'Node.js',
-        'Express.js',
-        'MongoDB',
-        'Nodemailer',
-        'CSS',
-        'REST API'
-      ],
-      liveLink: 'https://fixmyvillage.onrender.com/',
-      repoLink: 'https://github.com/skmsajid/fixmyvillage',
-      highlights: [
-        'Complaint Management',
-        'Role-Based Dashboards',
-        'Issue Tracking',
-        'Email Notifications'
-      ]
-    },
+{
+  id: 1,
+  title: 'Friends Cart',
+  description: 'A backend-focused e-commerce application built with Django and MySQL, featuring product management, shopping cart functionality, coupon validation, product reviews and ratings, and secure user authentication.',
+  tech: ['Python', 'Django', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+  repoLink: 'https://github.com/skmsajid/E-commerce',
+  highlights: [
+    'Cart Management',
+    'Coupon System',
+    'User Authentication',
+    'Reviews & Ratings'
+  ]
+},
+{
+  id: 2,
+  title: 'FixMyVillage',
+  description: 'A full-stack village issue management platform with a Django-based backend that enables villagers to report public issues such as garbage, water leakage, drainage, electricity, and road damage. Implements role-based access, complaint management, REST APIs, database operations, status tracking, and email notifications.',
+  tech: [
+    'Python',
+    'Django',
+    'Django REST Framework',
+    'MySQL',
+    'React.js',
+    'Nodemailer',
+    'CSS'
+  ],
+  repoLink: 'https://github.com/skmsajid/fixmyvillage',
+  highlights: [
+    'Complaint Management',
+    'REST API Development',
+    'Role-Based Access',
+    'Email Notifications'
+  ]
+},
     {
       id: 3,
       title: 'Weather App',
