@@ -52,7 +52,7 @@ export default function Projects() {
       <div className="projects-container">
         <h2 className="section-title">Featured Projects</h2>
         <p className="projects-subtitle">
-          Showcase of full-stack and frontend projects demonstrating modern web development practices and problem-solving skills.
+          Backend-focused projects demonstrating API development, database management, authentication, server-side business logic, and problem-solving skills.
         </p>
 
         <div className="projects-grid">
