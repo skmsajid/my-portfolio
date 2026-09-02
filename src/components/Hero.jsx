@@ -25,9 +25,9 @@ export default function Hero() {
               <span className="title-part-1">Shaik Mahammad</span>
               <span className="title-part-2">Sajid</span>
             </h1>
-            <p className="hero-subtitle">Backend Developer | Problem Solver | B.Tech CSE</p>
+            <p className="hero-subtitle">Backend Developer | Python & Django | Problem Solver</p>
             <p className="hero-description">
-              Building scalable web applications with React, Node.js, and modern technologies.
+              Building backend applications and REST APIs using Python, Django, Django REST Framework, and MySQL. DSA enthusiast with 600+ LeetCode problems solved.
             </p>
             
             <div className="hero-contact">
