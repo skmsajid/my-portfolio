@@ -25,10 +25,9 @@ export default function Hero() {
               <span className="title-part-1">Shaik Mahammad</span>
               <span className="title-part-2">Sajid</span>
             </h1>
-            <p className="hero-subtitle">Full Stack Developer | Problem Solver | B.Tech CSE</p>
+            <p className="hero-subtitle">Backend Developer | Problem Solver | B.Tech CSE</p>
             <p className="hero-description">
-              Building scalable web applications with React, Node.js, and modern technologies. 
-              DSA enthusiast with 600+ LeetCode problems solved.
+              Building scalable web applications with React, Node.js, and modern technologies.
             </p>
             
             <div className="hero-contact">
