@@ -2,32 +2,33 @@ import '../styles/skills.css';
 
 export default function Skills() {
   const skills = [
-    'Python',
-    'Data Structures & Algorithms',
-    'Object Oriented Programming (OOP)',
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
-    'Node.js',
-    'Express.js',
-    'MySQL',
-    'MongoDB',
-    'Git',
-    'GitHub',
-    'VS Code',
-  ];
+  'Python',
+  'Django',
+  'Django REST Framework',
+  'Data Structures & Algorithms',
+  'Object Oriented Programming (OOP)',
+  'REST APIs',
+  'MySQL',
+  'HTML',
+  'CSS',
+  'React',
+  'Git',
+  'GitHub',
+  'VS Code',
+];
 
   const proficiencyLevels = {
-    JavaScript: 'Intermediate',
-    'Object Oriented Programming (OOP)': 'Expert',
-    'Node.js': 'Intermediate',
-    MongoDB: 'Intermediate',
-    Python: 'Expert',
-    'Data Structures & Algorithms': 'Advanced',
-    HTML: 'Expert',
-    'MySQL': 'Intermediate',
-  };
+  Python: 'Advanced',
+  Django: 'Intermediate',
+  'Django REST Framework': 'Intermediate',
+  'Data Structures & Algorithms': 'Advanced',
+  'Object Oriented Programming (OOP)': 'Advanced',
+  'REST APIs': 'Intermediate',
+  MySQL: 'Intermediate',
+  HTML: 'Advanced',
+  CSS: 'Intermediate',
+  React: 'Intermediate',
+};
 
   return (
     <section id="skills" className="skills">
