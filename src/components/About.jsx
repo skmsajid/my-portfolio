@@ -26,7 +26,7 @@ export default function About() {
   ];
 
   const strengths = [
-    "Full Stack Development (MERN Stack)",
+    "Backend Development (Python, Django & DRF)",
     "Data Structure & Algorithm Optimization",
     "Database Design & Optimization"
   ];
@@ -45,9 +45,10 @@ export default function About() {
         {/* Intro Text */}
         <div className="about-intro-box">
           <p className="about-intro-text">
-            Motivated B.Tech CSE student with hands-on experience in full-stack web development using MERN stack.
-            Passionate problem solver with strong DSA fundamentals and proven track record of building scalable web applications.
-            Dedicated to continuous learning and staying current with modern web technologies.
+            Motivated B.Tech CSE student with hands-on experience in backend development using Python, Django, Django REST Framework, and MySQL.
+            Strong foundation in Data Structures & Algorithms and experience building web applications,
+            REST APIs, authentication systems, and database-driven applications.
+            Passionate about solving problems and continuously improving backend development skills.
           </p>
         </div>
 
@@ -98,9 +99,8 @@ export default function About() {
           <div className="detail-card career-card">
             <h3 className="card-title">🎯 Career Focus</h3>
             <p className="career-text">
-              Aspiring to become a proficient full-stack developer capable of building end-to-end solutions.
-              Focused on mastering modern web technologies and contributing to impactful projects that solve real-world problems.
-              Committed to achieving excellence through continuous learning.
+              Aspiring to become a strong backend developer capable of designing reliable, scalable, and secure web applications. Focused on Python, Django, Django REST Framework, MySQL, REST API development, authentication, and database management. Committed to building practical backend solutions and continuously strengthening problem-solving and software development skills.
+
             </p>
           </div>
 
