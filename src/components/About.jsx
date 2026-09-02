@@ -6,7 +6,7 @@ export default function About() {
       institution: "RGUKT RK Valley, Andhra Pradesh",
       degree: "B.Tech CSE",
       status: "Pursuing",
-      cgpa: "CGPA: 8.9",
+      cgpa: "CGPA: 8.93",
       year: "2023-Present"
     },
     {
