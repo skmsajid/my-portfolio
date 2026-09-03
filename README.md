@@ -1,7 +1,7 @@
 # 🌐 My Portfolio
 
 A personal portfolio website built with **React** to showcase my projects, skills, and experience.  
-This portfolio serves as a central place for recruiters and collaborators to learn about me and easily get in touch.
+This portfolio serves as a central place for recruiters and collaborators to learn about me and easily get  in touch.
 
 ---
 
